@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import { FaGrav, FaRegUserCircle } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthenticationPart/AuthProvider";
 
 
 const Navbar = () => {
 
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut().then().catch()
+    }
+    console.log(user)
 
     const navItems = <>
         <li><Link className="btn btn-ghost" to="/">Home</Link> </li>
@@ -14,7 +21,9 @@ const Navbar = () => {
     </>
     const navEnd = <>
         <FaRegUserCircle className='w-[52px] md:w-[60px] text-[#6F69AC] rounded-full h-[52px] md:h-[60px]' />
-        <Link to='/login' className="button button-primary bg-[#6F69AC] ms-4 md:ms-8">Login</Link>
+        {user ? <Link onClick={handleLogOut} to='/login' className="button button-primary bg-[#6F69AC] ms-4 md:ms-8">Log Out</Link>
+            : <Link to='/login' className="button button-primary bg-[#6F69AC] ms-4 md:ms-8">Login</Link>
+        }
     </>
 
     return (
