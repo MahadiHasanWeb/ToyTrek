@@ -14,13 +14,13 @@ const Navbar = () => {
 
     const navItems = <>
         <li><Link className="btn btn-ghost" to="/">Home</Link> </li>
-        <li><Link className="btn btn-ghost" to="/">All Toys</Link> </li>
-        <li><Link className="btn btn-ghost" to="/">My Toys</Link> </li>
-        <li><Link className="btn btn-ghost" to="/">Add A Toy</Link> </li>
-        <li> <Link className="btn btn-ghost" to="/">Blogs</Link> </li>
+        <li><Link className="btn btn-ghost" to="/allToys">All Toys</Link> </li>
+        <li><Link className="btn btn-ghost" to="/myToys">My Toys</Link> </li>
+        <li><Link className="btn btn-ghost" to="/addToys">Add A Toy</Link> </li>
+        <li> <Link className="btn btn-ghost" to="/blogs">Blogs</Link> </li>
     </>
     const navEnd = <>
-        <FaRegUserCircle className='w-[52px] md:w-[60px] text-[#6F69AC] rounded-full h-[52px] md:h-[60px]' />
+        {user ? <img title={user.displayName} className='w-[52px] md:w-[60px] text-[#6F69AC] rounded-full h-[52px] md:h-[60px]' src={user.photoURL} alt="" /> : ''}
         {user ? <Link onClick={handleLogOut} to='/login' className="button button-primary bg-[#6F69AC] ms-4 md:ms-8">Log Out</Link>
             : <Link to='/login' className="button button-primary bg-[#6F69AC] ms-4 md:ms-8">Login</Link>
         }
