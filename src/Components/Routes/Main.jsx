@@ -8,6 +8,7 @@ import AllToys from "../Shared/NavComponents/AllToys";
 import AddToys from "../Shared/NavComponents/AddToys";
 import MyToys from "../Shared/NavComponents/MyToys";
 import Blogs from "../Shared/NavComponents/Blogs";
+import PrivateRoute from "../AuthenticationPart/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -29,11 +30,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/addToys',
-                element: <AddToys></AddToys>,
+                element: <PrivateRoute><AddToys></AddToys></PrivateRoute>,
             },
             {
                 path: '/myToys',
-                element: <MyToys></MyToys>,
+                element: <PrivateRoute><MyToys></MyToys></PrivateRoute>,
             },
             {
                 path: '/signUp',
