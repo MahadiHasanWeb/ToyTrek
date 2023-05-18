@@ -11,7 +11,7 @@ const Footer = () => {
                         <div className="mb-6 md:mb-0">
                             <a className="flex items-center">
                                 <FaGrav className="mr-4 text-[#6F69AC] h-10 w-10 md:h-14 md:w-14" />
-                                <span className="self-center text-2xl md:text-3xl font-semibold whitespace-nowrap text-[#6F69AC]">ToyTrek</span>
+                                <span className="self-center text-2xl md:text-3xl font-semibold whitespace-nowrap  text-[#6F69AC]">ToyTrek</span>
                             </a>
                         </div>
                         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

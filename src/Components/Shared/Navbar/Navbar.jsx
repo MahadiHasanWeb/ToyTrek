@@ -4,13 +4,17 @@ import { FaGrav, FaRegUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
 
+
     const navItems = <>
         <li><Link className="btn btn-ghost" to="/">Home</Link> </li>
-        <li> <Link className="btn btn-ghost" to="/about">About</Link> </li>
+        <li><Link className="btn btn-ghost" to="/">All Toys</Link> </li>
+        <li><Link className="btn btn-ghost" to="/">My Toys</Link> </li>
+        <li><Link className="btn btn-ghost" to="/">Add A Toy</Link> </li>
+        <li> <Link className="btn btn-ghost" to="/">Blogs</Link> </li>
     </>
     const navEnd = <>
         <FaRegUserCircle className='w-[52px] md:w-[60px] text-[#6F69AC] rounded-full h-[52px] md:h-[60px]' />
-        <button className="button button-primary bg-[#6F69AC] ms-4 md:ms-8">Login</button>
+        <Link to='/login' className="button button-primary bg-[#6F69AC] ms-4 md:ms-8">Login</Link>
     </>
 
     return (

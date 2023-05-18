@@ -7,7 +7,7 @@
 }
 
 .button-primary {
-    @apply bg-gradient-to-r from-[#6F69AC] from-0% to-[#6F69AC] to-100% hover:from-[#17b9c2] hover:to-[#00ADB5]
+    @apply bg-gradient-to-r from-[#6F69AC] from-0% to-[#6F69AC] to-100% hover:from-[#6F69AC] hover:to-[#6F69AC]
 }
 
 .button {
