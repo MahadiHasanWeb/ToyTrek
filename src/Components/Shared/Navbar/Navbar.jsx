@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { FaGrav, FaRegUserCircle } from "react-icons/fa";
+import { FaGrav } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthenticationPart/AuthProvider";
+import ActiveLink from "../../ActiveLink/ActiveLink";
 
 
 const Navbar = () => {
@@ -10,17 +11,17 @@ const Navbar = () => {
     const handleLogOut = () => {
         logOut().then().catch()
     }
-    console.log(user)
 
     const navItems = <>
-        <li><Link className="btn btn-ghost" to="/">Home</Link> </li>
-        <li><Link className="btn btn-ghost" to="/allToys">All Toys</Link> </li>
-        <li><Link className="btn btn-ghost" to="/myToys">My Toys</Link> </li>
-        <li><Link className="btn btn-ghost" to="/addToys">Add A Toy</Link> </li>
-        <li> <Link className="btn btn-ghost" to="/blogs">Blogs</Link> </li>
+        <ActiveLink to="/">Home</ActiveLink>
+        <ActiveLink to="/allToys">All Toys</ActiveLink>
+        <ActiveLink to="/myToys">My Toys</ActiveLink>
+        <ActiveLink to="/addToys">Add A Toy</ActiveLink>
+        <ActiveLink to="/blogs">Blogs</ActiveLink>
+
     </>
     const navEnd = <>
-        {user ? <img title={user.displayName} className='w-[52px] md:w-[60px] text-[#6F69AC] rounded-full h-[52px] md:h-[60px]' src={user.photoURL} alt="" /> : ''}
+        {user ? <img title={user.displayName} className='w-[52px] md:w-[60px] text-[#6F69AC] rounded-full h-[52px] md:h-[60px]' src={user?.photoURL} alt="" /> : ''}
         {user ? <Link onClick={handleLogOut} to='/login' className="button button-primary bg-[#6F69AC] ms-4 md:ms-8">Log Out</Link>
             : <Link to='/login' className="button button-primary bg-[#6F69AC] ms-4 md:ms-8">Login</Link>
         }
@@ -43,7 +44,7 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className=" menu menu-horizontal px-1">
                     {navItems}
                 </ul>
             </div>

@@ -4,6 +4,10 @@ import Error from "../Error/Error";
 import Home from "../Home/Home";
 import Login from "../AuthenticationPart/Login";
 import SignUp from "../AuthenticationPart/SignUp";
+import AllToys from "../Shared/NavComponents/AllToys";
+import AddToys from "../Shared/NavComponents/AddToys";
+import MyToys from "../Shared/NavComponents/MyToys";
+import Blogs from "../Shared/NavComponents/Blogs";
 
 export const router = createBrowserRouter([
     {
@@ -21,15 +25,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/allToys',
-                element: <SignUp></SignUp>,
+                element: <AllToys></AllToys>,
             },
             {
                 path: '/addToys',
-                element: <SignUp></SignUp>,
+                element: <AddToys></AddToys>,
             },
             {
                 path: '/myToys',
-                element: <SignUp></SignUp>,
+                element: <MyToys></MyToys>,
             },
             {
                 path: '/signUp',
@@ -37,7 +41,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/blogs',
-                element: <SignUp></SignUp>,
+                element: <Blogs></Blogs>,
             },
         ]
     },
