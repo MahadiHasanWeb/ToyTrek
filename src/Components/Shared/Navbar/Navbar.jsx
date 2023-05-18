@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaGrav, FaRegUserCircle } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -6,10 +7,12 @@ const Navbar = () => {
     const navItems = <>
         <li><Link className="btn btn-ghost" to="/">Home</Link> </li>
         <li> <Link className="btn btn-ghost" to="/about">About</Link> </li>
-        <li><button className="btn btn-ghost">Log out</button></li>
-        <li> <Link className="btn btn-ghost" to="/login">Login</Link> </li>
-
     </>
+    const navEnd = <>
+        <FaRegUserCircle className='w-[52px] md:w-[60px] text-[#6F69AC] rounded-full h-[52px] md:h-[60px]' />
+        <button className="button button-primary bg-[#6F69AC] ms-4 md:ms-8">Login</button>
+    </>
+
     return (
         <div className="navbar bg-base-100 h-28 mb-4">
             <div className="navbar-start">
@@ -21,8 +24,9 @@ const Navbar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl">
-                    <img src="" alt="" />
+                <Link to="/" className="flex normal-case">
+                    <FaGrav className="mr-4 h-14 w-14 hidden md:flex text-[#6F69AC]" />
+                    <span className="self-center  text-2xl md:text-3xl font-semibold whitespace-nowrap text-[#6F69AC]">ToyTrek</span>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -31,7 +35,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-
+                {navEnd}
             </div>
         </div>
     );

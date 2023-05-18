@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-container {
+    @apply px-1 md:px-5 py-7 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 lg:py-12
+}
+
+.button-primary {
+    @apply bg-gradient-to-r from-[#6F69AC] from-0% to-[#6F69AC] to-100% hover:from-[#17b9c2] hover:to-[#00ADB5]
+}
+
+.button {
+    @apply font-medium transition duration-200 shadow-md md:mb-0 px-4 py-2 md:px-8 md:py-3 text-lg rounded-lg border-transparent border-2 text-white
+}
