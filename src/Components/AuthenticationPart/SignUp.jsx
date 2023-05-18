@@ -78,7 +78,11 @@ const SignUp = () => {
     }
 
     return (
-        <div className="flex justify-center md:min-h-screen bg-gray-100">
+        <div className="grid justify-center md:grid-cols-2 grid-cols-1 items-center md:min-h-screen bg-[#fcfcfc]">
+            <div className="">
+                <h1 className='text-4xl md:text-6xl text-center text-[#57C5B6] font-bold my-6'>ToyTrek</h1>
+                <h3 className='text-2xl px-8'>Experience Action-Packed Excitement: ToyTrek in Your Hands</h3>
+            </div>
             <div className="container mb-10 mt-10 my-auto max-w-md border-2 border-gray-200 p-3 bg-white">
                 <div className="text-center my-6">
                     <h1 className="text-3xl font-semibold text-gray-700">Sign Up</h1>
@@ -106,11 +110,11 @@ const SignUp = () => {
                             <input type="password" name="password" id="password" placeholder="Your password" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required />
                         </div>
                         <div className="mb-6">
-                            <button type="submit" className="w-full px-3 py-4 text-white bg-[#00ADB5] rounded-md hover:bg-[#08c5cf] focus:outline-none duration-100 ease-in-out">Sign up</button>
+                            <button type="submit" className="w-full px-3 py-4 text-white bg-[#57C5B6] rounded-md hover:bg-[#49afa2] focus:outline-none duration-100 ease-in-out">Sign up</button>
                         </div>
                         <p className="text-sm text-center text-gray-400">
                             Already have an account?
-                            <Link to='/login'> <button className="font-semibold text-[#00ADB5] focus:text-[#00ADB5] focus:outline-none focus:underline">Sign in</button></Link>
+                            <Link to='/login'> <button className="font-semibold text-[#57C5B6] focus:text-[#57C5B6] focus:outline-none focus:underline">Sign in</button></Link>
                         </p>
                     </form>
 
@@ -124,8 +128,8 @@ const SignUp = () => {
                             Google
                         </button>
                     </div>
-                    <p className='text-[#00ADB5] mt-5'>{error}</p>
-                    <p className='text-[#00ADB5] mt-5'>{success}</p>
+                    <p className='text-[#57C5B6] mt-5'>{error}</p>
+                    <p className='text-[#57C5B6] mt-5'>{success}</p>
                 </div>
             </div>
         </div>
