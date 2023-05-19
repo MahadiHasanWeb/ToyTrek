@@ -25,7 +25,7 @@ const Banner = () => {
             className="mySwiper"
         >
             <SwiperSlide>
-                <div className='relative grid grid-cols-1 items-center w-full rounded-xl h-full bg-cover bg-center bg-no-repeat mb-8 md:h-[550px] bg-[url(https://i.imgur.com/OmM1BaZ.jpg)] p-4 '>
+                <div className='relative grid grid-cols-1 items-center w-full rounded-xl h-full bg-cover bg-center bg-no-repeat mb-8 md:h-[550px] bg-[url(https://i.imgur.com/GJth9C1.jpg)] p-4 '>
                     <div className="bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] rounded-xl">
                         <div className='text-white space-y-7 p-5 md:pl-12 md:w-1/2'>
                             <h2 className='text-5xl md:text-6xl font-bold'>Unleash the Power of Play with<span className=' text-[#57C5B6]'>ToyTrek</span></h2>
@@ -38,7 +38,7 @@ const Banner = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className='relative grid grid-cols-1 items-center w-full rounded-xl h-full bg-cover bg-center bg-no-repeat mb-8 md:h-[550px] bg-[url(https://i.imgur.com/lWpY1FL.jpg)] p-4 '>
+                <div className='relative grid grid-cols-1 items-center w-full rounded-xl h-full bg-cover bg-center bg-no-repeat mb-8 md:h-[550px] bg-[url(https://i.imgur.com/ch1YfhY.jpg)] p-4 '>
                     <div className="bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] rounded-xl">
                         <div className='text-white space-y-7 p-5 md:pl-12 md:w-1/2'>
                             <h2 className='text-5xl md:text-6xl font-bold'>Limitless Play Possibilities with<span className=' text-[#57C5B6]'>ToyTrek</span></h2>
