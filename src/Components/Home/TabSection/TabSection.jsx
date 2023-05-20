@@ -14,7 +14,7 @@ const TabSection = () => {
     }, [])
 
     const category = Toys?.filter((Toy) => Toy.subCategory[0].value === activeTab)
-    console.log(category);
+    // console.log(category);
 
     const handleTabClick = (id) => {
         setActiveTab(id);

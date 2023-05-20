@@ -9,6 +9,7 @@ import MyToys from "../Shared/NavComponents/MyToys";
 import Blogs from "../Shared/NavComponents/Blogs";
 import PrivateRoute from "../AuthenticationPart/PrivateRoute";
 import AllToys from "../Shared/NavComponents/AllToys/AllToys";
+import SingleToy from "../Shared/NavComponents/SingleToyDetails/SingleToy";
 
 export const router = createBrowserRouter([
     {
@@ -43,6 +44,11 @@ export const router = createBrowserRouter([
             {
                 path: '/blogs',
                 element: <Blogs></Blogs>,
+            },
+            {
+                path: '/toy/:id',
+                element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
             },
         ]
     },

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const AllToysRow = ({ RowData }) => {
     // console.log(RowData)
-    const { SellerName, ToyName, Price, quantity, subCategory } = RowData;
+    const { SellerName, ToyName, Price, quantity, subCategory, _id } = RowData;
 
     return (
         <tr className="hover">
@@ -13,7 +13,7 @@ const AllToysRow = ({ RowData }) => {
             <td>{subCategory[0].value}</td>
             <td>{Price}</td>
             <td>{quantity}</td>
-            <td><Link to='/login' className="btn button-primary btn-xs bg-[#6F69AC]">View Details button</Link></td>
+            <td><Link to={`/toy/${_id}`} className="btn button-primary btn-xs bg-[#6F69AC]">View Details button</Link></td>
         </tr>
     );
 };
