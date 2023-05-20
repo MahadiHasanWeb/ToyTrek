@@ -8,7 +8,7 @@ const TabSection = () => {
     // console.log(tabIndex)
 
     useEffect(() => {
-        fetch('http://localhost:5000/allToys')
+        fetch('https://toys-server.vercel.app/allToys')
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])

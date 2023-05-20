@@ -24,7 +24,7 @@ const UpdateToy = () => {
 
         UpdateToy.subCategory = selectedOption;
 
-        fetch(`http://localhost:5000/toy/${_id}`, {
+        fetch(`https://toys-server.vercel.app/toy/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
