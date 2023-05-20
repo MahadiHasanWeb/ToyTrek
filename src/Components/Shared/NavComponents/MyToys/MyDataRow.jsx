@@ -70,10 +70,10 @@ const MyDataRow = ({ RowData, setMyToys, myToys }) => {
                 <Link to={`/toy/${_id}`} className="btn button-primary btn-xs bg-[#6F69AC]">View Details button</Link>
             </td>
             <td>
-                <div className="btn-group grid grid-cols-2 gap-4">
-                    <Link to={`/updateToy/${_id}`}><button className="btn btn-outline btn-primary"><FaEdit /></button></Link>
-                    <button onClick={() => handleDelete(_id)} className="btn btn-outline btn-primary"><FaTrashAlt /></button>
-                </div>
+                <Link to={`/updateToy/${_id}`}><button className="btn  btn-outline btn-primary"><FaEdit /></button></Link>
+            </td>
+            <td>
+                <button onClick={() => handleDelete(_id)} className="btn btn-outline btn-primary"><FaTrashAlt /></button>
             </td>
         </tr>
     );

@@ -1,10 +1,17 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Select from 'react-select';
 import { AuthContext } from '../../AuthenticationPart/AuthProvider';
 import Swal from 'sweetalert2';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const AddToys = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     const { user } = useContext(AuthContext)
     // console.log(user)
     const [selectedOption, setSelectedOption] = useState(null);
@@ -57,10 +64,10 @@ const AddToys = () => {
 
     return (
         <div className="p-6 md:p-8 bg-[#F4F3F0]">
-            <h1 className="text-4xl text-center font-semibold mb-8">Add Your Toys </h1>
+            <h1 data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500" className="text-4xl text-center font-semibold mb-8">Add Your Toys </h1>
             <form onSubmit={handleAddToy}>
                 <div className="md:flex justify-center items-center md:gap-10 mb-8">
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2" data-aos="fade-right">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
@@ -68,7 +75,7 @@ const AddToys = () => {
                             <input type="text" placeholder="Toy Name" name="name" className="input input-bordered w-full" required />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2" data-aos="fade-left">
                         <label className="label">
                             <span className="label-text">Available Quantity</span>
                         </label>
@@ -78,7 +85,7 @@ const AddToys = () => {
                     </div>
                 </div>
                 <div className="hidden justify-center items-center md:gap-10 mb-8">
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2" data-aos="fade-right">
                         <label className="label">
                             <span className="label-text">Seller Name</span>
                         </label>
@@ -86,7 +93,7 @@ const AddToys = () => {
                             <input type="text" placeholder={user?.displayName} defaultValue={user?.displayName} name="SellerName" className="input input-bordered w-full" required />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2" data-aos="fade-left">
                         <label className="label">
                             <span className="label-text">Seller Email</span>
                         </label>
@@ -96,9 +103,7 @@ const AddToys = () => {
                     </div>
                 </div>
                 <div className="md:flex justify-center items-center md:gap-10 mb-8">
-
-
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2" data-aos="fade-right">
                         <label className="label">
                             <span className="label-text">Ratings</span>
                         </label>
@@ -106,9 +111,7 @@ const AddToys = () => {
                             <input type="number" placeholder="Out of 5" name="rating" className="input input-bordered w-full" required />
                         </label>
                     </div>
-
-
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2" data-aos="fade-left">
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
@@ -118,8 +121,7 @@ const AddToys = () => {
                     </div>
                 </div>
                 <div className="md:flex justify-center items-center md:gap-10 mb-8">
-
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2" data-aos="fade-right">
                         <label className="label">
                             <span className="label-text">Photo</span>
                         </label>
@@ -128,7 +130,7 @@ const AddToys = () => {
                         </label>
                     </div>
 
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2" data-aos="fade-left">
                         <label className="label">
                             <span className="label-text">Details</span>
                         </label>
@@ -138,7 +140,7 @@ const AddToys = () => {
                     </div>
                 </div>
                 <div className="md:flex justify-center items-center md:gap-10 mb-8">
-                    <div className="form-control w-full md:w-2/3 ">
+                    <div className="form-control w-full md:w-2/3 " data-aos="fade-right">
                         <label className="label">
                             <span className="label-text">Category</span>
                         </label>

@@ -24,7 +24,7 @@ const MyToys = () => {
 
     return (
         <div>
-            <h1 className="text-center text-4xl">My Toys</h1>
+            <h1 className="text-center mb-8 text-4xl">My Toys</h1>
             <div className="overflow-x-auto ">
                 <table className="table w-full">
                     {/* head */}
@@ -38,6 +38,7 @@ const MyToys = () => {
                             <th>Price</th>
                             <th>Available Quantity</th>
                             <th>Action</th>
+                            <th></th>
                             <th></th>
                         </tr>
                     </thead>
