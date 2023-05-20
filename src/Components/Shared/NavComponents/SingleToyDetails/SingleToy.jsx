@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SingleToy = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     const toyData = useLoaderData()
     // console.log(toyData)
@@ -40,7 +46,7 @@ const SingleToy = () => {
                             <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Buy Now</button>
                         </div>
                     </div>
-                    <img alt="ecommerce" className="lg:w-1/2 w-full h-64 md:h-80 object-cover object-center rounded" src={ToyPicture} />
+                    <img alt="ecommerce" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500" className="lg:w-1/2 w-full h-64 md:h-80 object-cover object-center rounded" src={ToyPicture} />
                 </div>
             </div>
         </section>

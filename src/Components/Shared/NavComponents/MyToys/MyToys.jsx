@@ -1,8 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../AuthenticationPart/AuthProvider';
 import MyDataRow from './MyDataRow';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const MyToys = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     const { user } = useContext(AuthContext);
 
@@ -22,8 +28,8 @@ const MyToys = () => {
             <div className="overflow-x-auto ">
                 <table className="table w-full">
                     {/* head */}
-                    <thead>
-                        <tr>
+                    <thead data-aos="fade-left">
+                        <tr >
                             <th></th>
                             <th>Image</th>
                             <th>Toy Name</th>

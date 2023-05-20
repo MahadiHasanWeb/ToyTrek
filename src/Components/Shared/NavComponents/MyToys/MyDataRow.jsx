@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const MyDataRow = ({ RowData, setMyToys, myToys }) => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     const { ToyPicture, ToyName, Price, quantity, subCategory, _id, rating } = RowData;
 
@@ -44,7 +50,7 @@ const MyDataRow = ({ RowData, setMyToys, myToys }) => {
 
 
     return (
-        <tr className="hover">
+        <tr className="hover" data-aos="fade-left">
             <th></th>
             <td>
                 <div className="flex items-center space-x-3">

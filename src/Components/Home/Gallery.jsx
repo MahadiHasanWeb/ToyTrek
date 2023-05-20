@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Gallery = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     return (
         <section className="text-gray-600 body-font">
             <div className="container px-5 py-24 mx-auto flex flex-wrap">
@@ -10,25 +18,25 @@ const Gallery = () => {
                 </div>
                 <div className="flex flex-wrap md:-m-2 -m-1">
                     <div className="flex flex-wrap w-1/2">
-                        <div className="md:p-2 p-1 w-1/2">
-                            <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.imgur.com/e6Oqoto.jpg"/>
+                        <div className="md:p-2 p-1 w-1/2" data-aos="fade-right">
+                            <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.imgur.com/e6Oqoto.jpg" />
                         </div>
-                        <div className="md:p-2 p-1 w-1/2">
-                            <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.imgur.com/emtxdgk.jpg"/>
+                        <div className="md:p-2 p-1 w-1/2" data-aos="fade-up">
+                            <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.imgur.com/emtxdgk.jpg" />
                         </div>
-                        <div className="md:p-2 p-1 w-full">
-                            <img alt="gallery" className="w-full h-full object-cover object-center block" src="https://i.imgur.com/3tVJmsj.jpg"/>
+                        <div className="md:p-2 p-1 w-full" data-aos="fade-right">
+                            <img alt="gallery" className="w-full h-full object-cover object-center block" src="https://i.imgur.com/3tVJmsj.jpg" />
                         </div>
                     </div>
                     <div className="flex flex-wrap w-1/2">
-                        <div className="md:p-2 p-1 w-full">
-                            <img alt="gallery" className="w-full h-full object-cover object-center block" src="https://i.imgur.com/sZCBNR9.jpg"/>
+                        <div className="md:p-2 p-1 w-full" data-aos="fade-left">
+                            <img alt="gallery" className="w-full h-full object-cover object-center block" src="https://i.imgur.com/sZCBNR9.jpg" />
                         </div>
-                        <div className="md:p-2 p-1 w-1/2">
-                            <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.imgur.com/hH5FBCJ.jpg"/>
+                        <div className="md:p-2 p-1 w-1/2" data-aos="fade-up">
+                            <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.imgur.com/hH5FBCJ.jpg" />
                         </div>
-                        <div className="md:p-2 p-1 w-1/2">
-                            <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.imgur.com/51m6C1E.jpg"/>
+                        <div className="md:p-2 p-1 w-1/2" data-aos="fade-left">
+                            <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://i.imgur.com/51m6C1E.jpg" />
                         </div>
                     </div>
                 </div>
