@@ -1,7 +1,7 @@
 import Banner from "./Banner";
 import BestToys from "./BestToys";
 import Gallery from "./Gallery";
-import TabSection from "./TabSection";
+import TabSection from "./TabSection/TabSection";
 
 
 const Home = () => {

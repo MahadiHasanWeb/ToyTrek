@@ -9,7 +9,15 @@
 .button-primary {
     @apply bg-gradient-to-r from-[#6F69AC] from-0% to-[#6F69AC] to-100% hover:from-[#6F69AC] hover:to-[#6F69AC]
 }
+.button-second {
+    @apply bg-gradient-to-r from-[#57C5B6] from-0% to-[#57C5B6] to-100% hover:from-[#57C5B6] hover:to-[#57C5B6]
+}
 
 .button {
     @apply font-medium transition duration-200 shadow-md md:mb-0 px-4 py-2 md:px-8 md:py-3 text-lg rounded-lg border-transparent border-2 text-white
+}
+
+.tabBtn {
+    @apply inline-block hover:border-gray-300 rounded-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300
+   
 }
