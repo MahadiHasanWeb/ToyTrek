@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 const SingleToy = () => {
 
     const toyData = useLoaderData()
-    console.log(toyData)
+    // console.log(toyData)
 
     const { SellerName, SellerEmail, ToyPicture, details, rating, ToyName, Price, quantity, subCategory, _id, } = toyData;
 
