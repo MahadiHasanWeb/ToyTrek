@@ -1,10 +1,17 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
 import { AuthContext } from './AuthProvider';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SignUp = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
@@ -79,11 +86,11 @@ const SignUp = () => {
 
     return (
         <div className="grid justify-center md:grid-cols-2 grid-cols-1 items-center md:min-h-screen bg-[#fcfcfc]">
-            <div className="">
+            <div className="" data-aos="fade-right">
                 <h1 className='text-4xl md:text-6xl text-center text-[#57C5B6] font-bold my-6'>ToyTrek</h1>
                 <h3 className='text-2xl px-8'>Experience Action-Packed Excitement: ToyTrek in Your Hands</h3>
             </div>
-            <div className="container mb-10 mt-10 my-auto max-w-md border-2 border-gray-200 p-3 bg-white">
+            <div data-aos="fade-left" className="container mb-10 mt-10 my-auto max-w-md border-2 border-gray-200 p-3 bg-white">
                 <div className="text-center my-6">
                     <h1 className="text-3xl font-semibold text-gray-700">Sign Up</h1>
                     <p className="text-gray-500">Create a new account</p>
@@ -128,8 +135,8 @@ const SignUp = () => {
                             Google
                         </button>
                     </div>
-                    <p className='text-[#57C5B6] mt-5'>{error}</p>
-                    <p className='text-[#57C5B6] mt-5'>{success}</p>
+                    <p data-aos="fade-left" className='text-[#57C5B6] mt-5'>{error}</p>
+                    <p data-aos="fade-left" className='text-[#57C5B6] mt-5'>{success}</p>
                 </div>
             </div>
         </div>
