@@ -4,11 +4,11 @@ import Error from "../Error/Error";
 import Home from "../Home/Home";
 import Login from "../AuthenticationPart/Login";
 import SignUp from "../AuthenticationPart/SignUp";
-import AllToys from "../Shared/NavComponents/AllToys";
 import AddToys from "../Shared/NavComponents/AddToys";
 import MyToys from "../Shared/NavComponents/MyToys";
 import Blogs from "../Shared/NavComponents/Blogs";
 import PrivateRoute from "../AuthenticationPart/PrivateRoute";
+import AllToys from "../Shared/NavComponents/AllToys/AllToys";
 
 export const router = createBrowserRouter([
     {
