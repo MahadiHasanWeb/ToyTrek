@@ -14,7 +14,7 @@ const MyDataRow = ({ RowData, setMyToys, myToys }) => {
     const { ToyPicture, ToyName, Price, quantity, subCategory, _id, rating } = RowData;
 
     const handleDelete = id => {
-        console.log(id)
+        // console.log(id)
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -30,7 +30,7 @@ const MyDataRow = ({ RowData, setMyToys, myToys }) => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                        // console.log(data)
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
@@ -41,7 +41,7 @@ const MyDataRow = ({ RowData, setMyToys, myToys }) => {
                             setMyToys(remaining)
                         }
                     })
-                console.log(result)
+                // console.log(result)
             }
 
         })

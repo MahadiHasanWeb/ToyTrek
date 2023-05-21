@@ -14,7 +14,7 @@ const MyToys = () => {
 
 
     const [myToys, setMyToys] = useState([])
-    console.log(myToys)
+    // console.log(myToys)
 
     useEffect(() => {
         fetch(`https://toys-server.vercel.app/myToys/${user?.email}`)
@@ -25,7 +25,7 @@ const MyToys = () => {
     return (
         <div>
             <h1 className="text-center mb-8 text-4xl">My Toys</h1>
-            <div className="overflow-x-auto ">
+            <div className={`overflow-x-auto ${myToys.length < 6 ? 'h-screen' : ''}`}>
                 <table className="table w-full">
                     {/* head */}
                     <thead data-aos="fade-left">

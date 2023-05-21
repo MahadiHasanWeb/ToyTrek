@@ -14,7 +14,7 @@ const AllToys = () => {
     // console.log(toyData)
 
     return (
-        <div className="overflow-x-auto ">
+        <div className={`overflow-x-auto ${toyData.length<6 ? 'h-screen' : ''}`}>
             <table className="table w-full">
                 {/* head */}
                 <thead>
