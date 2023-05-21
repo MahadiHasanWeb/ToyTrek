@@ -24,7 +24,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a href="#" target="_blank" rel="nofollow"
-                                            className="text-gray-600 hover:underline dark:text-gray-400">Tailwind CSS</a>
+                                            className="text-gray-600 hover:underline dark:text-gray-400">About Us</a>
                                     </li>
                                 </ul>
                             </div>
