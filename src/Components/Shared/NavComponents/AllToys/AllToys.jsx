@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import AllToysRow from './AllToysRow';
 import { FaSistrix } from "react-icons/fa";
+import useTitle from '../../../../Hooks/useTitle';
 
 const AllToys = () => {
 
     const [toyData, setToyData] = useState();
     const [toyLoadedData, setToyLoadedData] = useState();
     const [searchText, setSearchText] = useState("");
+    useTitle('All Toys')
 
     const handleSearch = () => {
         fetch(`https://toys-server.vercel.app/toySearch/${searchText}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 setToyData(data);
             });
     };

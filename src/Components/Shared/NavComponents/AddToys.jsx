@@ -4,6 +4,7 @@ import { AuthContext } from '../../AuthenticationPart/AuthProvider';
 import Swal from 'sweetalert2';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import useTitle from '../../../Hooks/useTitle';
 
 
 const AddToys = () => {
@@ -11,6 +12,8 @@ const AddToys = () => {
     useEffect(() => {
         AOS.init();
     }, [])
+
+    useTitle('Add Toys')
 
     const { user } = useContext(AuthContext)
     // console.log(user)

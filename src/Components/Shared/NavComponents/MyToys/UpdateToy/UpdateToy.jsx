@@ -4,12 +4,15 @@ import Select from 'react-select';
 import Swal from 'sweetalert2';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import useTitle from '../../../../../Hooks/useTitle';
 
 const UpdateToy = () => {
 
     useEffect(() => {
         AOS.init();
     }, [])
+
+    useTitle('Update Toy')
 
     const toyData = useLoaderData();
     const { ToyPicture, details, rating, ToyName, Price, quantity, _id } = toyData;

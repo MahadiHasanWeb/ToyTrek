@@ -2,12 +2,15 @@ import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import useTitle from '../../../../Hooks/useTitle';
 
 const SingleToy = () => {
 
     useEffect(() => {
         AOS.init();
     }, [])
+
+    useTitle('Toy Details')
 
     const toyData = useLoaderData()
     // console.log(toyData)

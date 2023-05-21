@@ -3,12 +3,15 @@ import { AuthContext } from '../../../AuthenticationPart/AuthProvider';
 import MyDataRow from './MyDataRow';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import useTitle from '../../../../Hooks/useTitle';
 
 const MyToys = () => {
 
     useEffect(() => {
         AOS.init();
     }, [])
+
+    useTitle('My Toys')
 
     const { user } = useContext(AuthContext);
 
