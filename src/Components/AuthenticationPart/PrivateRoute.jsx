@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from './AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 const PrivateRoute = ({ children }) => {
+    const notify = () => toast("Please Login!");
     const { user, loading } = useContext(AuthContext);
     const location = useLocation();
     if (loading) {
@@ -23,7 +25,10 @@ const PrivateRoute = ({ children }) => {
     if (user) {
         return children;
     }
-    return <Navigate state={{ from: location }} to='/login' replace></Navigate>;
+    else {
+        notify()
+    }
+    return <Navigate state={{ from: location }} to='/login' replace></Navigate>
 };
 
 export default PrivateRoute;
