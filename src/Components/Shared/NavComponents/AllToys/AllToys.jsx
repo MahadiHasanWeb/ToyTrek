@@ -4,6 +4,7 @@ import AllToysRow from './AllToysRow';
 const AllToys = () => {
 
     const [toyData, setToyData] = useState();
+    const [toyLoadedData, setToyLoadedData] = useState();
 
     useEffect(() => {
         fetch('https://toys-server.vercel.app/allToys')
@@ -11,33 +12,40 @@ const AllToys = () => {
             .then(data => setToyData(data))
     }, [])
 
-    // console.log(toyData)
+    // console.log(toyLoadedData)
+
+    useEffect(() => {
+        setToyLoadedData(toyData)
+    }, [toyData])
 
     return (
-        <div className={`overflow-x-auto ${toyData.length<6 ? 'h-screen' : ''}`}>
-            <table className="table w-full">
-                {/* head */}
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Seller</th>
-                        <th>Toy Name</th>
-                        <th>Sub-category</th>
-                        <th>Price</th>
-                        <th>Available Quantity</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        toyData?.slice(0, 20).map(RowData => <AllToysRow
-                            key={RowData._id}
-                            RowData={RowData}
-                        ></AllToysRow>)
-                    }
-                </tbody>
-            </table>
-        </div>
+        <>
+            <div className={`h-screen ${toyData ? 'hidden' : ''}`}></div>
+            <div className={`overflow-x-auto ${toyData?.length < 6 ? 'h-screen' : '' && toyLoadedData === undefined ? 'h-screen' : ''}`}>
+                <table className="table w-full">
+                    {/* head */}
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Seller</th>
+                            <th>Toy Name</th>
+                            <th>Sub-category</th>
+                            <th>Price</th>
+                            <th>Available Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            toyData?.slice(0, 20).map(RowData => <AllToysRow
+                                key={RowData._id}
+                                RowData={RowData}
+                            ></AllToysRow>)
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </>
     );
 };
 
